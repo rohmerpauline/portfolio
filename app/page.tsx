@@ -1,8 +1,15 @@
+import { About } from './components/About/About';
+import { HeroContainer } from './components/HeroContainer/HeroContainer';
+import { MyExperience } from './components/MyExperience/MyExperience';
+import { MyWork } from './components/MyWork/MyWork';
 
 export default function Home() {
   return (
-    <div className='font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20'>
-      NextJs Template
+    <div className="">
+      <HeroContainer />
+      <MyWork />
+      <MyExperience />
+      <About />
     </div>
   );
 }
