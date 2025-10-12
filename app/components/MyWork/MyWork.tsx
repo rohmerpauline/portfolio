@@ -19,6 +19,7 @@ type ArrowProps = {
 export const MyWork = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(2);
+  const [visibleDots, setVisibleDots] = useState(false);
 
   const currentProject = projectsData.find(
     (project) => project.id - 1 === currentSlideIndex,
@@ -35,7 +36,16 @@ export const MyWork = () => {
       }
     };
 
-    updateSlides(); // run on mount
+    const updateDotsVisibility = () => {
+      if (window.innerWidth <= 768) {
+        setVisibleDots(true);
+      } else {
+        setVisibleDots(false);
+      }
+    };
+
+    updateSlides();
+    updateDotsVisibility();
     window.addEventListener('resize', updateSlides);
 
     return () => window.removeEventListener('resize', updateSlides);
@@ -77,7 +87,7 @@ export const MyWork = () => {
   }
 
   const settings = {
-    dots: false,
+    dots: visibleDots,
     infinite: true,
     speed: 500,
     slidesToShow: slidesToShow,
@@ -110,7 +120,7 @@ export const MyWork = () => {
   return (
     <div
       id={SECTION_IDS.MY_WORK}
-      className="bg-secondary section-layout mx-2 sm:mx-5"
+      className="bg-secondary section-layout mx-2 sm:mx-5 mywork-section"
     >
       <SectionHeading heading="My work" />
       <SectionSubHeading
