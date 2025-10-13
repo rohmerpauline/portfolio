@@ -1,7 +1,7 @@
 'use client';
 import { navigationData } from '@/app/data/navigationData';
 import { useEffect, useState } from 'react';
-import { FaCode } from 'react-icons/fa6';
+import { CiMenuFries } from 'react-icons/ci';
 
 export const Header = () => {
   const [activeNav, setActiveNav] = useState(navigationData[0].label);
@@ -46,7 +46,7 @@ export const Header = () => {
   return (
     <div className="sticky top-3 z-[9999] w-screen">
       <div className="md:hidden px-6 py-4">
-        <FaCode
+        <CiMenuFries
           size={50}
           className={`p-2 rounded-2xl ml-auto cursor-pointer hover:text-primary ${scrolled ? 'bg-neutral-100' : ''}`}
           onClick={() => setDropDownVisible(true)}

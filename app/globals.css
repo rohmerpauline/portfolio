@@ -66,10 +66,6 @@
     font-size: 12px !important;
   }
 
-  .about-section .slick-dots {
-    bottom: -50px !important;
-  }
-
   .about-section .slick-arrow {
     display: none !important;
   }
