@@ -24,9 +24,8 @@ export const About = () => {
     slidesToScroll: 1,
     initialSlide: 0,
     swipeToSlide: true,
-    adaptiveHeight: true,
     afterChange: (current: number) => {
-      setTimeout(() => setCurrentSlideIndex(current), 20);
+      setCurrentSlideIndex(current);
     },
   };
 
