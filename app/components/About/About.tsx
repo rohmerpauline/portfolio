@@ -26,7 +26,7 @@ export const About = () => {
     swipeToSlide: true,
     adaptiveHeight: true,
     afterChange: (current: number) => {
-      setCurrentSlideIndex(current);
+      setTimeout(() => setCurrentSlideIndex(current), 10);
     },
   };
 
