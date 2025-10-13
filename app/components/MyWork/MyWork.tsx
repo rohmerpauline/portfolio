@@ -114,7 +114,7 @@ export const MyWork = () => {
       },
     ],
     afterChange: (current: number) => {
-      setTimeout(() => setCurrentSlideIndex(current), 10);
+      setTimeout(() => setCurrentSlideIndex(current), 20);
     },
   };
 
@@ -125,7 +125,7 @@ export const MyWork = () => {
     >
       <SectionHeading heading="My work" />
 
-      <div className="h-[40px]">
+      <div className="h-[50px]">
         <SectionSubHeading
           subheading={`<MyWork project={${currentProject?.title}} />`}
         />
