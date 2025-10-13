@@ -22,11 +22,11 @@ export const HeroContainer = () => {
       <div>
         <SectionHeading
           heading={
-            <>
+            <div>
               Hello world,
               <br />
               I'm Pauline
-            </>
+            </div>
           }
         />
         <div className="font-fira font-medium text-md lg:text-lg xl:text-xl leading-relaxed">

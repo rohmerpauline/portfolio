@@ -24,6 +24,7 @@ export const About = () => {
     slidesToScroll: 1,
     initialSlide: 0,
     swipeToSlide: true,
+    adaptiveHeight: true,
     afterChange: (current: number) => {
       setCurrentSlideIndex(current);
     },
@@ -32,7 +33,11 @@ export const About = () => {
   return (
     <section id={SECTION_IDS.ABOUT} className="section-layout about-section">
       <SectionHeading heading="About" />
-      <SectionSubHeading subheading={`<About who={${currentWho?.title}} />`} />
+      <div className="h-[40px]">
+        <SectionSubHeading
+          subheading={`<About who={${currentWho?.title}} />`}
+        />
+      </div>
       <div className="pt-5 pb-15">
         <div className="bg-secondary rounded-4xl px-10 py-20">
           <Slider {...settings}>

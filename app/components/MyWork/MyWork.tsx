@@ -94,6 +94,7 @@ export const MyWork = () => {
     slidesToScroll: 1,
     initialSlide: 0,
     swipeToSlide: true,
+    adaptiveHeight: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -123,9 +124,12 @@ export const MyWork = () => {
       className="bg-secondary section-layout mx-2 sm:mx-5 mywork-section"
     >
       <SectionHeading heading="My work" />
-      <SectionSubHeading
-        subheading={`<MyWork project={${currentProject?.title}} />`}
-      />
+
+      <div className="h-[40px]">
+        <SectionSubHeading
+          subheading={`<MyWork project={${currentProject?.title}} />`}
+        />
+      </div>
       <div className="pt-5 pb-15">
         <Slider {...settings}>
           {projectsData.map((project) => (
