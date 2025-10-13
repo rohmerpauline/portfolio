@@ -94,7 +94,6 @@ export const MyWork = () => {
     slidesToScroll: 1,
     initialSlide: 0,
     swipeToSlide: true,
-    adaptiveHeight: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -114,7 +113,7 @@ export const MyWork = () => {
       },
     ],
     afterChange: (current: number) => {
-      setTimeout(() => setCurrentSlideIndex(current), 20);
+      setCurrentSlideIndex(current);
     },
   };
 
