@@ -26,14 +26,14 @@ export const About = () => {
     swipeToSlide: true,
     adaptiveHeight: true,
     afterChange: (current: number) => {
-      setTimeout(() => setCurrentSlideIndex(current), 10);
+      setTimeout(() => setCurrentSlideIndex(current), 20);
     },
   };
 
   return (
     <section id={SECTION_IDS.ABOUT} className="section-layout about-section">
       <SectionHeading heading="About" />
-      <div className="h-[40px]">
+      <div className="h-[50px]">
         <SectionSubHeading
           subheading={`<About who={${currentWho?.title}} />`}
         />
