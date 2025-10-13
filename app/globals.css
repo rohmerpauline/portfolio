@@ -70,6 +70,10 @@
     display: none !important;
   }
 
+  .slick-dots {
+    bottom: -30px !important;
+  }
+
   @media (min-width: 768px) {
     .slick-arrow {
       display: block !important;

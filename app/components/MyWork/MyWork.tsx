@@ -114,7 +114,7 @@ export const MyWork = () => {
       },
     ],
     afterChange: (current: number) => {
-      setCurrentSlideIndex(current);
+      setTimeout(() => setCurrentSlideIndex(current), 10);
     },
   };
 
